@@ -656,26 +656,26 @@
                            <div class="col-md-6">
                               <div class="form-group">
                                  <label for="user_name">Participant Name</label>
-                                 <input type="text" class="form-control" id="user_name" name="user_name" placeholder="Participant Name" vrequired="required" />
+                                 <input type="text" class="form-control" id="user_name" name="user_name" placeholder="Participant Name" required>
                               </div>
                            </div>
                            <div class="col-md-6">
                               <div class="form-group">
                                  <label for="mobile_no">Mobile No.</label>
-                                 <input type="number" class="number form-control" id="mobile_no" name="mobile_no" placeholder="Mobile No." vrequired="required" maxlength="10" />
+                                 <input type="number" class="number form-control" id="mobile_no" name="mobile_no" placeholder="Mobile No." required maxlength="10">
                               </div>
                            </div>
                            <div class="col-md-12">
                               <div class="form-group">
                                  <label for="user_email">Email Id</label>
-                                 <input type="email" class="form-control" id="user_email" name="user_email" placeholder="Email Id" vrequired="required"/>
+                                 <input type="email" class="form-control" id="user_email" name="user_email" placeholder="Email Id" required>
                               </div>
                            </div>
                            <div class="col-md-6">
                               <div class="form-group">
                                  <label for="user_dob">Date of Birth</label>
                                  <span class="input-error"></span>
-                                 <input type="text" class="form-control "  id="datetime_12" name="user_dob" placeholder="Date of Birth" vrequired="required"/>
+                                 <input type="text" class="form-control "  id="datetime_12" name="user_dob" placeholder="Date of Birth" required>
                               </div>
                            </div>
                            <div class="col-md-6">
@@ -693,14 +693,14 @@
                            <div class"clearfix"></div>
                            <div class="col-md-6">
                               <div class="form-group">
-                                 <label for="exampleInputEmail1">Referal Id</label>
-                                 <input type="text" class="form-control" name="user_referal" id="user_referal" placeholder="Referal Id (Optional)">
+                                 <label for="exampleInputEmail1">Referal ID</label>
+                                 <input type="text" class="form-control" name="user_referal" id="user_referal" placeholder="Referal ID (Optional)">
                               </div>
                            </div>
                            <div class="col-md-6">
                               <div class="form-group">
                                  <label for="exampleInputEmail1">Select City</label>
-                                 <select class="form-control chosen-select" name="user_city" id="user_city" vrequired="required">
+                                 <select class="form-control chosen-select" name="user_city" id="user_city" required>
                                     <option value="">Select your city</option>
                                     <option value="Thane, Maharashtra (MH)">Thane, Maharashtra (MH)</option>
                                     <option value="North 24 Parganas, West Bengal (WB)">North 24 Parganas, West Bengal (WB)</option>
@@ -1384,7 +1384,7 @@
                            <div class="col-md-6">
                               <div class="form-group">
                                  <label for="exampleInputEmail1">Select Your College</label>
-                                 <select class="form-control chosen-select" name="user_college" id="user_college" vrequired="required">
+                                 <select class="form-control chosen-select" name="user_college" id="user_college" required>
                                     <option value="">Select your colleges</option>
                                     <option value="A V S ENGINEERING COLLEGE">A V S ENGINEERING COLLEGE</option>
                                     <option value="A.C.COLLEGE OF ENGINEERING AND TECHNOLOGY (AUTONOMOUS)">A.C.COLLEGE OF ENGINEERING AND TECHNOLOGY (AUTONOMOUS)</option>
@@ -2009,7 +2009,7 @@
                            <div class="col-md-6">
                               <div class="form-group">
                                  <label for="reg_department">Select Department</label>
-                                 <select class="form-control chosen-select" name="user_department" id="user_department" vrequired="required">
+                                 <select class="form-control chosen-select" name="user_department" id="user_department" required>
                                     <option value="">Select your department</option>
                                     <option value="Aeronautical Engineering">Aeronautical Engineering</option>
                                     <option value="Aerospace Engineering">Aerospace Engineering</option>
@@ -2092,7 +2092,7 @@
                            <div class="col-md-6">
                               <div class="form-group">
                                  <label for="user_degree">Select Degree</label>
-                                 <select class="form-control chosen-select" name="user_degree" id="user_degree" vrequired="required">
+                                 <select class="form-control chosen-select" name="user_degree" id="user_degree" required>
                                     <option value="">Select your degree</option>
                                     <option value="B.E ">B.E </option>
                                     <option value="B.A">B.A</option>
@@ -2122,13 +2122,23 @@
                            <div class="col-md-6">
                               <div class="form-group">
                                  <label for="user_year">Select your year</label>
-                                 <select class="form-control chosen-select" id="user_year" name="user_year" vrequired="required">
+                                 <select class="form-control chosen-select" id="user_year" name="user_year" required>
                                     <option value="">Select your year</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
                                     <option value="4">4</option>
                                     <option value="5">5</option>
+                                 </select>
+                              </div>
+                           </div>
+                           <div class="col-md-12">
+                              <div class="form-group">
+                                 <label for="user_year">Select Workshop(s)</label>
+                                 <select class="form-control chosen-select" id="user_workshop" name="user_workshop" required>
+                                    <option value="Both">Both</option>
+                                    <option value="Workshop 1">Workshop 1</option>
+                                    <option value="Workshop 2">Workshop 2</option>
                                  </select>
                               </div>
                            </div>
@@ -2263,22 +2273,27 @@
    <script type="text/javascript">
       $('#reg_submit').on('click', function(e) {
          e.preventDefault();
-         $.ajax({
-            url: 'https://script.google.com/macros/s/AKfycbzsygBP48lPo0UAjQwXEiQPoqquZmw9qfh6NpkiGTDlDQ3xbv7h/exec',
-            type: "post",
-            data: $('form#register_form').serialize(),
-            beforeSend: function() {
-               $("#reg_submit").prop('disabled', true);
-            },
-            success: function(response) {
-               console.log(response.result)
-               alert("Registered!")
-               $("#reg_submit").prop('disabled', false)
-               $('form#register_form')[0].reset()
-               $('select').children('option').first().prop('selected', true)
-               $('select').trigger("chosen:updated")
-            }
-         })
+         var f = document.getElementsByTagName('form')[0];
+         if(f.checkValidity()) {
+            $.ajax({
+               url: 'https://script.google.com/macros/s/AKfycbzsygBP48lPo0UAjQwXEiQPoqquZmw9qfh6NpkiGTDlDQ3xbv7h/exec',
+               type: "post",
+               data: $('form#register_form').serialize(),
+               beforeSend: function() {
+                  $("#reg_submit").prop('disabled', true);
+               },
+               success: function(response) {
+                  console.log(response.result)
+                  alert("Registered!")
+                  $("#reg_submit").prop('disabled', false)
+                  $('form#register_form')[0].reset()
+                  $('select').children('option').first().prop('selected', true)
+                  $('select').trigger("chosen:updated")
+               }
+            })
+         } else {
+            alert('Invalid Data or Empty Fields')
+         }
       })
    </script>
 </html>
